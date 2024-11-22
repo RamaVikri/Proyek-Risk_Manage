@@ -1,11 +1,10 @@
 <?php
 session_start();
-if($_SESSION['level']==""){
+if($_SESSION['status']==""){
     header("location:index.php?pesan=gagal");
 }
 
-echo $_SESSION['username'] . "<br> Anda telah login sebagai";
-echo $_SESSION['level']; 
+echo $_SESSION['status'] . "<br> Anda telah login sebagai";
 ?>
 
 <!DOCTYPE html>

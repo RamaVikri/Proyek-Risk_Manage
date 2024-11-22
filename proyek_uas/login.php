@@ -12,21 +12,22 @@ public function login($username, $password){
     
     if(mysqli_num_rows($result)>0){
         $data = mysqli_fetch_assoc($result);
+        
 
 	//login sbg admin
 	if($data['status']=="admin1"){
 		
 		$_SESSION['username'] = $username;
-		$_SESSION['level'] = "admin";
+		$_SESSION['status'] = "admin";
 	
-		header("location:menu_halaman/halaman_admin.php");
+		header("location:menu_halaman/halaman_menu.php");
  
         exit();
     }else if($data['status']=="dekan"){
         $_SESSION['username'] = $username;
-		$_SESSION['level'] = "dekan";
+		$_SESSION['status'] = "dekan";
 
-        header("location:menu_halaman/halaman_dekan.php");
+        header("location:menu_halaman/halaman_menu.php");
         exit();
     }
     else{
