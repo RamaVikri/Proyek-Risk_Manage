@@ -8,8 +8,9 @@ $user = new VerifLogin($conn);
 if($_SERVER['REQUEST_METHOD']== 'POST'){
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+    
     if($user -> login($username, $password)){
+     
         
     }else {
         echo "password atau Username salah";
