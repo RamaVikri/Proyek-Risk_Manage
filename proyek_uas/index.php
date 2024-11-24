@@ -30,9 +30,9 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 
     <form  method="post">
         <label for="">Username</label>
-        <input type="text" name="username" class = "form_login" placeholder="username..." required = "required"> 
+        <input type="text" name="username" class = "form_login" placeholder="Username..." required = "required"> 
         <label for="">Password</label>
-        <input type="password" name="password" class = "form_login" placeholder="username..." required = "required"> 
+        <input type="password" name="password" class = "form_login" placeholder="Password..." required = "required"> 
         <button class=" tombol_login">LOGIN</button>
     </form>
 </body>
