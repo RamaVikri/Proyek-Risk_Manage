@@ -23,17 +23,38 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRROYEK</title>
+    <title>PROYEK</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h2>LOGIN</h2>
+<body class="desktop-1">
 
+    <h2 class="aplikasimanajemenrisiko">Risk O+</h2>
+
+    <img src="assets/Opang.jpg" class="logoMerk"/>
+    <div class="deskripsi" >Manage Ur Risk With Risk O+ App 
+        O+ means Opang</div>
+
+
+
+<div class="rectangle1"></div>
     <form  method="post">
-        <label for="">Username</label>
-        <input type="text" name="username" class = "form_login" placeholder="Username..." required = "required"> 
-        <label for="">Password</label>
-        <input type="password" name="password" class = "form_login" placeholder="Password..." required = "required"> 
-        <button class=" tombol_login">LOGIN</button>
+        <div class="rectangle5"></div>
+            <div class="silahkanlogin">Silahkan Login</div>
+        <label class="username" for="">Username</label>
+        <input type="text" name="username" class = "rectangle3" placeholder="Username..." required = "required"> 
+        <label class="password" for="">Password</label>
+        <input type="password" name="password" class = "rectangle6" placeholder="Password..." required = "required">
+        
+            <button class="rectangle2">LOGIN</button>
     </form>
+
+
+    
+
+
+
+
+
+
 </body>
 </html>
