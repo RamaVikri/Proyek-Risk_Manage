@@ -28,7 +28,9 @@ if($_SESSION['status']==""){
                 <option value="tabel">Tabel</option>
                 <option value="kelompok">Kelompok Resiko</option>
                 <option value="sumber">Sumber Resiko</option>
+                <option value="daftarUser" >Daftar User</option>
             </select>
+            <li> <a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
             <?php } elseif ($_SESSION['status'] == 'dekan' ){ ?>    
             <select name="LAPORAN" id="kategori">
                 <option value="tabel">Tabel</option>
