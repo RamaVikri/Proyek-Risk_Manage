@@ -1,6 +1,7 @@
 <?php
 require_once '../conn.php';
-// $conn = mysqli_connect('localhost', 'root','', 'riskman');
+require_once '../util/function.php';
+
 if(isset($_POST['submit'])){
    
 

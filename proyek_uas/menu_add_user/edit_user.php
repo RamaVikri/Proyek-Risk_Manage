@@ -1,5 +1,6 @@
 <?php
 require_once '../conn.php';
+require_once '../util/function.php';
 
 $id = $_GET['id'];
 $data_user = data("SELECT * FROM user WHERE id = $id")[0];

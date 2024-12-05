@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once '../conn.php';
+require_once '../util/function.php';
+
 // include '../conn.php';
 if($_SESSION['status']==""){
     header("location:index.php?pesan=gagal");

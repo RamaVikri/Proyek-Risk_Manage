@@ -1,5 +1,7 @@
 <?php
 require_once '../conn.php';
+require_once '../util/function.php';
+
 
 $id = $_GET["id"];
 

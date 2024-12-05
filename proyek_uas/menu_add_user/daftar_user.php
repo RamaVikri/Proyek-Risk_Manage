@@ -1,5 +1,7 @@
 <?php
 require_once '../conn.php';
+require_once '../util/function.php';
+
 
 $data_user = data("SELECT * FROM user ");
 
