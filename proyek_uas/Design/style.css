@@ -1,0 +1,240 @@
+#div1{
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #303030;
+}
+#div2{
+    position: absolute;
+    width: 228px;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+    background: #ABABAB;
+}
+#div3{
+    position: absolute;
+    width: 228px;
+    height: 37px;
+    left: 0px;
+    top: 195px;
+    background: #FFD700;
+    border-radius: 44px 0px 0px 44px;
+}
+#header{
+    position: absolute;
+    width: 113px;
+    height: 30px;
+    left: calc(50% - 113px/2 - 606.5px);
+    top: 175px;
+
+    font-family: 'IM FELL Double Pica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+/* identical to box height */
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#div5{
+    position: absolute;
+    width: 228px;
+    height: 37px;
+    left: 0px;
+    top: 208px;
+    background: #D50000;
+    border-radius: 44px 0px 0px 44px;
+}
+#logiut{
+    position: absolute;
+    width: 78px;
+    height: 30px;
+    left: calc(50% - 60px/2 - 606.5px);
+    top: 388px;
+
+    font-family: 'IM FELL Double Pica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#div7{
+    position: absolute;
+    width: 228px;
+    height: 37px;
+    left: 0px;
+    top: 104px;
+    background: #FFD700;
+    border-radius: 44px 0px 0px 44px;
+}
+#Tabpact{
+    position: absolute;
+    width: 131px;
+    height: 30px;
+    left: calc(50% - 131px/2 - 597.5px);
+    top: 284px;
+
+    font-family: 'IM FELL Double Pica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#div4{
+    position: absolute;
+    width: 228px;
+    height: 37px;
+    left: 0px;
+    top: 156px;
+
+    background: #FFD700;
+    border-radius: 44px 0px 0px 44px;
+}
+#akun{
+    position: absolute;
+    width: 87px;
+    height: 30px;
+    left: calc(50% - 87px/2 - 601.5px);
+    top: 335px;
+
+    font-family: 'IM FELL Double Pica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#div6{
+    position: absolute;
+    width: 228px;
+    height: 37px;
+    left: 0px;
+    top: 247px;
+
+    background: #FFD700;
+    border-radius: 44px 0px 0px 44px;
+}
+#dafris{
+    position: absolute;
+    width: 134px;
+    height: 30px;
+    left: calc(50% - 134px/2 - 604px);
+    top: 233px;
+
+    font-family: 'IM FELL Double Pica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+    text-decoration-line: underline;
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#div8{
+    position: absolute;
+    width: 228px;
+    height: 37px;
+    left: 0px;
+    top: -52px;
+
+    background: #303030;
+    border-radius: 44px 0px 0px 44px;
+}
+#risreg{
+    position: absolute;
+    width: 132px;
+    height: 30px;
+    left: calc(50% - 132px/2 - 605px);
+    top: 128px;
+    
+    font-family: 'IM FELL Double Pica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    /* identical to box height */
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);      
+}
+#div9{
+    position: absolute;
+    width: 1212px;
+    height: 89px;
+    left: 228px;
+    top: -299px;
+
+    background: #ABABAB;
+    border-radius: 0px;
+}
+#jabatan{
+    position: absolute;
+    width: 143px;
+    height: 44px;
+    left: calc(50% - 143px/2 - 378.5px);
+    top: 30px;
+
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+
+    color: #000000;
+}
+#nama{
+    position: absolute;
+    width: 143px;
+    height: 44px;
+    left: calc(50% - 143px/2 - 378.5px);
+    top: -20px;
+
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+
+    color: #000000;
+}
+#risko{
+    position: absolute;
+    width: 209px;
+    height: 59px;
+    left: calc(50% - 209px/2 - 601.5px);
+    top: -15px;
+
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 64px;
+
+    color: #000000;
+}
