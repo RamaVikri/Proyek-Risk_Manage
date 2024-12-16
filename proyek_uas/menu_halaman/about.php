@@ -25,20 +25,19 @@ if ($_SESSION['status'] == "") {
             <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>
-                <li>
-                    <a href="#">Laporan</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Tabel</a></li>
-                        <li><a href="#">Kelompok Resiko</a></li>
-                        <li><a href="#">Sumber Resiko</a></li>
-                        <?php if ($_SESSION['status'] == 'admin'): ?>
-                            <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
-                        <?php endif; ?>
-                    </ul>
+                
+                <li><a href="riskMatrix.php">Risk Matrix</a></li>
+                
                 </li>
                 <li><a href="riskRegister.php">Risk Register</a></li>
-                <li><a href="#">Halaman A</a></li>
+                <li><a href="riskRegistered.php">Risk List</a></li>
                 <li><a href="#">Halaman B</a></li>
+
+                <!-- fitur khusus admin -->
+                <?php if ($_SESSION['status'] == 'admin'): ?>
+                    <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
+                <?php endif; ?>
+                <!-- fitur khusus admin end-->
                 <li><a href="../logout.php">Logout</a></li>
             </ul>
         </div>
