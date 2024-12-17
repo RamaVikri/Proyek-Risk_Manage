@@ -30,7 +30,7 @@ if ($_SESSION['status'] == "") {
                 
                 </li>
                 <li><a href="riskRegister.php">Risk Register</a></li>
-                <li><a href="riskRegistered.php">Risk List</a></li>
+                <li><a href="riskList.php">Risk List</a></li>
                 <li><a href="#">Halaman B</a></li>
 
                 <!-- fitur khusus admin -->
