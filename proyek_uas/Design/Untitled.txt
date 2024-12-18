@@ -1,0 +1,80 @@
+
+
+/* Treatments */
+
+
+
+/* Rectangle 14 */
+
+
+
+
+/* Div6 */
+
+
+
+
+/* Rectangle 11 */
+
+
+
+
+/* Tabel Impact */
+
+
+
+/* Rectangle 12 */
+
+
+
+
+/* Account */
+
+
+
+/* Rectangle 10 */
+
+
+
+
+/* Daftar Risiko */
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 228px;
+height: 37px;
+left: 0px;
+top: 143px;
+
+background: #303030;
+border-radius: 44px 0px 0px 44px;
+
+
+/* Risk Register */
+
+
+
+/* Rectangle 1 */
+
+
+
+
+/* Jabatan */
+
+
+
+
+
+/* Nama */
+
+
+
+
+
+/* RISK O+ */
+
+
+

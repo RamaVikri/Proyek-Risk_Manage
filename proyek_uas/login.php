@@ -23,20 +23,20 @@ public function login($username, $password){
 		
 		// $_SESSION['username'] = $username;
 		//  $_SESSION['status'] = "admin";
-		header("location:menu_halaman/halaman_menu.php");
+		header("location:menu_halaman/about.php");
  
         exit();
     }else if($data['status']=="dekan"){
         // $_SESSION['username'] = $username;
 		// $_SESSION['status'] = "dekan";
 
-        header("location:menu_halaman/halaman_menu.php");
+        header("location:menu_halaman/about.php");
         exit();
     }else if($data['status']=="kaprodi"){
         // $_SESSION['username'] = $username;
 		// $_SESSION['status'] = "dekan";
 
-        header("location:menu_halaman/halaman_menu.php");
+        header("location:menu_halaman/about.php");
         exit();
     }
     else{
