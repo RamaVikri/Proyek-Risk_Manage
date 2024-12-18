@@ -7,7 +7,7 @@ if ($_SESSION['status'] == "") {
 }
 
 // Database connection
-$conn = new mysqli("localhost", "root", "", "riskman");
+// $conn = new mysqli("localhost", "root", "", "riskman");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Generate kode resiko otomatis

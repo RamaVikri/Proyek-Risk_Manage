@@ -1,6 +1,6 @@
 <?php
 require_once 'conn.php';
-require_once 'login.php';
+require_once 'VerifLogin.php';
 
 session_start();
 $user = new VerifLogin($conn);

@@ -19,7 +19,7 @@ public function login($username, $password){
 
 
 	//login sbg admin
-	if($data['status']=="admin1"){
+	if($data['status']=="admin"){
 		
 		// $_SESSION['username'] = $username;
 		//  $_SESSION['status'] = "admin";

@@ -88,7 +88,6 @@ for ($i = 1; $i <= 5; $i++) {
 
 <!DOCTYPE html>
 <html lang="id">
-<>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Matrix</title>
@@ -239,7 +238,7 @@ for ($i = 1; $i <= 5; $i++) {
         </tr>
         <?php
         // Koneksi ke database
-        $conn = new mysqli("localhost", "root", "", "riskman");
+        // $conn = new mysqli("localhost", "root", "", "riskman");
 
         // Periksa koneksi
         if ($conn->connect_error) {
