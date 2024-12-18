@@ -1,4 +1,11 @@
 <?php
+session_start();
+require_once '../conn.php';
+
+if ($_SESSION['status'] == "") {
+    header("location:index.php?pesan=gagal");
+}
+
 // Database connection
 $conn = new mysqli("localhost", "root", "", "riskman");
 
@@ -29,17 +36,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error: " . $stmt->error;
     }
 }
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Input Risiko</title>
+    <title>Risk Register</title>
+    <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
 </head>
 <body>
-    <form method="POST">
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Aplikasi Risk Management</h2>
+            <h3>Selamat Datang</h3>
+            <p><?php echo $_SESSION['nama']; ?></p>
+            <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
+            <ul class="sidebar-menu">
+                <li><a href="about.php">About</a></li>
+                
+                <li><a href="riskMatrix.php">Risk Matrix</a></li>
+                
+                </li>
+                <li><a href="riskRegister.php">Risk Register</a></li>
+                <li><a href="riskList.php">Risk List</a></li>
+                <li><a href="#">Halaman B</a></li>
+
+                <!-- fitur khusus admin -->
+                <?php if ($_SESSION['status'] == 'admin'): ?>
+                    <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
+                <?php endif; ?>
+                <!-- fitur khusus admin end-->
+                <li><a href="../logout.php">Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+        <form method="POST">
         <h3>Input Data Risiko</h3>
         <label>Objective dan Tujuan:</label><br>
         <input type="text" name="objective_tujuan" required><br>
@@ -115,5 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="hidden" name="owner_risk" value="Nama User">
         <button type="submit">Simpan</button>
     </form>
+        </div>
+    </div>
 </body>
 </html>
