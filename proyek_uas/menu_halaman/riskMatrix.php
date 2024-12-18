@@ -29,35 +29,7 @@ while ($row = mysqli_fetch_assoc($resultCategory)) {
     $kategoriRisiko[] = "'".$row['risk_category']."'";
     $jumlahKategori[] = $row['total_risiko'];
 }
-//----
-// $sql = "SELECT inherent_risk_likelihood AS likelihood, 
-//                inherent_risk_impact AS impact, 
-//                COUNT(*) AS jumlah_risiko
-//         FROM risk
-//         GROUP BY inherent_risk_likelihood, inherent_risk_impact
-//         ORDER BY inherent_risk_likelihood, inherent_risk_impact";
 
-// $result = $conn->query($sql);
-
-// // Menyusun data ke dalam array
-// $matrixData = [];
-// while ($row = $result->fetch_assoc()) {
-//     $likelihood = $row['likelihood'];
-//     $impact = $row['impact'];
-//     $jumlah = $row['jumlah_risiko'];
-
-//     $matrixData[$likelihood][$impact] = $jumlah;
-// }
-
-// // Inisialisasi matriks 5x5
-// $matrix = [];
-// for ($i = 1; $i <= 5; $i++) {
-//     for ($j = 1; $j <= 5; $j++) {
-//         $matrix[$i][$j] = $matrixData[$i][$j] ?? 0;
-//     }
-// }
-
-//-baru
 // Query untuk mengambil data risk
 $sql = "SELECT id, inherent_risk_likelihood AS likelihood, inherent_risk_impact AS impact
         FROM risk
@@ -93,25 +65,6 @@ for ($i = 1; $i <= 5; $i++) {
     <title>Risk Matrix</title>
     <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
-    <!-- <style>
-        .matrix-container {
-            width: 45%;
-            margin: 20px auto;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        .matrix-container h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        .chart {
-            width: 100%;
-            height: 300px;
-        }
-    </style> -->
     <style>
         table {
             border-collapse: collapse;
@@ -120,12 +73,14 @@ for ($i = 1; $i <= 5; $i++) {
             position: relative;
         }
         td, th {
-            border: 1px solid black;
-            text-align: center;
-            width: 20%;
-            height: 80px;
-            font-size: 14px;
-            position: relative;
+        border: 1px solid black;
+        text-align: center;
+        width: 100px; /* Lebar tetap */
+        height: 80px; /* Tinggi tetap */
+        font-size: 14px;
+        position: relative;
+        word-wrap: break-word; /* Memastikan teks tetap di dalam kotak */
+        overflow: hidden; /* Menghindari overflow konten */
         }
         /* Pewarnaan Sel */
         .low { background-color: #00b050; }
@@ -153,6 +108,33 @@ for ($i = 1; $i <= 5; $i++) {
             font-weight: bold;
             color: red;
         }
+
+        .main-content{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .matrix-container{
+            padding: 80px;
+            margin: 20px;
+            height: 80%;
+            width: 80%;
+            max-width: 700px;
+            max-height: 700px;
+        }
+
+        .matrix1{
+            width: 100%; /* Pastikan lebar 100% dari kontainer */
+            height: 100%;
+        table-layout: fixed; /* Membagi kolom secara merata */
+        border-collapse: collapse; /* Menghilangkan jarak antar sel */
+        }
+        
+        /* .chart{
+            max-width: 60%;
+            max-height: 60%;
+        } */
+
     </style>
 </head>
 <body>
@@ -179,63 +161,22 @@ for ($i = 1; $i <= 5; $i++) {
         <!-- Main Content -->
         <div class="main-content">
             <h1>Risk Matrix Dashboard</h1>
-
             <!-- Matrix Likelihood dan Consequence -->
-            <div class="matrix-container"><h1>Risk Matrix</h1>
-    <!-- <canvas id="riskMatrixChart" width="800" height="800"></canvas>
-
-    <script>
-        const matrixData = <?php echo json_encode($matrix); ?>;
-
-        const labels = ["1-Minimal", "2-Minor", "3-Moderate", "4-Major", "5-Catastrophic"];
-        const datasets = [];
-
-        // Menyiapkan data untuk chart
-        for (let i = 1; i <= 5; i++) {
-            datasets.push({
-                label: `Likelihood ${i}`,
-                data: Object.values(matrixData[i]),
-                backgroundColor: `rgba(${i * 50}, ${255 - i * 40}, ${100 + i * 30}, 0.8)`,
-                borderWidth: 1
-            });
-        }
-
-        const ctx = document.getElementById('riskMatrixChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: datasets
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top'
-                    },
-                    title: {
-                        display: true,
-                        text: 'Inherent Risk Matrix (Likelihood vs Impact)'
-                    }
-                },
-                scales: {
-                    x: { stacked: true },
-                    y: { stacked: true }
-                }
-            }
-        });
-    </script> -->
-    <h1 style="text-align: center;">Risk Matrix (Likelihood vs Impact)</h1>
-    <table>
+            <div class="matrix-container"><h1>Likelihood vs Impact</h1>
+    <table class="matrix-container" >
         <tr>
-            <th rowspan="6" class="axis-label">Likelihood</th>
-            <th class="axis-label"> </th>
-            <th class="axis-label">1 - Sangat Rendah</th>
-            <th class="axis-label">2 - Rendah</th>
-            <th class="axis-label">3 - Sedang</th>
-            <th class="axis-label">4 - Tinggi</th>
-            <th class="axis-label">5 - Sangat Tinggi</th>
+        <tr>
+            <th colspan="7" class="axis-label">Impact</th>
         </tr>
+            <th rowspan="6" style="transform: rotate(270deg)" class="axis-label">Likelihood</th>
+            <th class="axis-label"> </th>
+            <th class="axis-label">Insignificant</th>
+            <th class="axis-label">Minor</th>
+            <th class="axis-label">Moderate</th>
+            <th class="axis-label">Major</th>
+            <th class="axis-label">VeryHigh</th>
+        </tr>
+        
         <?php
         // Koneksi ke database
         // $conn = new mysqli("localhost", "root", "", "riskman");
@@ -275,34 +216,41 @@ for ($i = 1; $i <= 5; $i++) {
             ],
         ];
 
-        // Membuat tabel 5x5
-        for ($i = 5; $i >= 1; $i--) {
-            echo "<tr>";
-            echo "<th class='axis-label'>Likelihood $i</th>";
-            for ($j = 1; $j <= 5; $j++) {
-                // Pewarnaan sel
-                $colorClass = isset($colorMapping[$i][$j]) ? $colorMapping[$i][$j] : 'low';
-                echo "<td class='$colorClass'>";
+        // Array deskripsi Likelihood
+$likelihoodLabels = [
+    5 => "Almost Certain",
+    4 => "Likely",
+    3 => "Moderate",
+    2 => "Unlikely",
+    1 => "Rare"
+];
 
-                // Menampilkan kode risiko sesuai Likelihood dan Impact
-                if (!empty($risks)) {
-                    echo "<div style='display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;'>";
-                    foreach ($risks as $risk) {
-                        if ($risk['likelihood'] == $i && $risk['impact'] == $j) {
-                            echo "<div class='risk-code'>{$risk['id']}</div>";
-                        }
-                    }
-                    echo "</div>";
+// Mengubah tabel menjadi deskriptif
+for ($i = 5; $i >= 1; $i--) {
+    echo "<tr>";
+    echo "<th class='axis-label'>{$likelihoodLabels[$i]}</th>"; // Menggunakan deskripsi dari array
+    for ($j = 1; $j <= 5; $j++) {
+        // Pewarnaan sel
+        $colorClass = isset($colorMapping[$i][$j]) ? $colorMapping[$i][$j] : 'low';
+        echo "<td class='$colorClass'>";
+
+        // Menampilkan kode risiko sesuai Likelihood dan Impact
+        if (!empty($risks)) {
+            echo "<div style='display: flex; flex-wrap: wrap; justify-content: center; gap: 5px;'>";
+            foreach ($risks as $risk) {
+                if ($risk['likelihood'] == $i && $risk['impact'] == $j) {
+                    echo "<div class='risk-code'>{$risk['id']}</div>";
                 }
-                echo "</td>";
             }
-            echo "</tr>";
+            echo "</div>";
         }
-        $conn->close();
+        echo "</td>";
+    }
+    echo "</tr>";
+}
+
         ?>
-        <tr>
-            <th colspan="7" class="axis-label">Severity (Impact)</th>
-        </tr>
+        
     </table>
             </div>
 

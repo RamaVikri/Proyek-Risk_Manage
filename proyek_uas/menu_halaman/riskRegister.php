@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     if ($stmt->execute()) {
-        header("Location: riskRegistered.php"); // Redirect ke halaman lain
+        header("Location: riskList.php"); // Redirect ke halaman lain
         exit();
     } else {
         echo "Error: " . $stmt->error;
