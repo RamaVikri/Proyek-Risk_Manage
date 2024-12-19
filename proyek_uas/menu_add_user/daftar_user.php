@@ -36,7 +36,7 @@ $data_user = $user-> data();
                 </li>
                 <li><a href="../menu_halaman/riskRegister.php">Risk Register</a></li>
                 <li><a href="../menu_halaman/riskList.php">Risk List</a></li>
-                <li><a href="#">Halaman B</a></li>
+                <li><a href="../menu_halaman/riskTreatments.php">Risk Treatments</a></li>
 
                 <!-- fitur khusus admin -->
                 <?php if ($_SESSION['status'] == 'admin'): ?>

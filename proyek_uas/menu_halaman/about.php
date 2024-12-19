@@ -31,7 +31,7 @@ if ($_SESSION['status'] == "") {
                 </li>
                 <li><a href="riskRegister.php">Risk Register</a></li>
                 <li><a href="riskList.php">Risk List</a></li>
-                <li><a href="#">Halaman B</a></li>
+                <li><a href="riskTreatments.php">Risk Treatments</a></li>
 
                 <!-- fitur khusus admin -->
                 <?php if ($_SESSION['status'] == 'admin'): ?>

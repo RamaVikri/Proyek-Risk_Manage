@@ -48,7 +48,7 @@ $result = $conn->query("SELECT * FROM risk");
                 </li>
                 <li><a href="riskRegister.php">Risk Register</a></li>
                 <li><a href="riskList.php">Risk List</a></li>
-                <li><a href="#">Halaman B</a></li>
+                <li><a href="riskTreatments.php">Risk Treatmens</a></li>
 
                 <!-- fitur khusus admin -->
                 <?php if ($_SESSION['status'] == 'admin'): ?>
@@ -78,6 +78,7 @@ $result = $conn->query("SELECT * FROM risk");
                 <th>Pengendalian</th>
                 <th>Residual Risk</th>
                 <th>Risk Treatment</th>
+                <th>Risk Evidence</th>
                 <th>Target Risk</th>
             </tr>
         </thead>
@@ -114,6 +115,9 @@ $result = $conn->query("SELECT * FROM risk");
                     <td>
                         <?= $row['risk_treatment_accept_reduce']; ?><br>
                         <?= $row['risk_treatment_text']; ?>
+                    </td>
+                    <td>
+                        <?= $row['risk_evidence']; ?><br>>
                     </td>
                     <td>
                         Likelihood: <?= $row['target_risk_likelihood']; ?><br>
