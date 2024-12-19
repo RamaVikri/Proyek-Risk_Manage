@@ -88,6 +88,9 @@ outline:none;
 }
 .rectangle2
 {
+
+    font-family:IM FELL Double Pica;
+font-size:28px;
 background-color:#ffd700;
 height:92px;
 width:345px;
@@ -140,7 +143,6 @@ width:299px;
 height:52px;
 position:absolute;
 line-height:auto;
-text-decoration:underline;
 border-style:hidden;
 outline:none;
 }

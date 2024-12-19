@@ -66,10 +66,22 @@ for ($i = 1; $i <= 5; $i++) {
     <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
     <style>
+        .deskripsi-matrix{
+            background-color: white;
+            padding: 40px;
+            margin: 20px;
+            height: 50%;
+            width: 34vh;
+            max-width: 700px;
+            max-height: 700px;
+            background-color: white;
+            border-radius:30px;
+        }
+
         table {
             border-collapse: collapse;
             margin: 20px auto;
-            width: 60%;
+            width: 100%;
             position: relative;
         }
         td, th {
@@ -82,6 +94,7 @@ for ($i = 1; $i <= 5; $i++) {
         word-wrap: break-word; /* Memastikan teks tetap di dalam kotak */
         overflow: hidden; /* Menghindari overflow konten */
         }
+
         /* Pewarnaan Sel */
         .low { background-color: #00b050; }
         .low-med { background-color: #92d050; }
@@ -98,7 +111,7 @@ for ($i = 1; $i <= 5; $i++) {
         height: 30px;
         margin: 2px; /* Memberi jarak antar risiko */
         border-radius: 50%;
-        background-color: rgba(0, 0, 255, 0.7);
+        background-color: rgba(2, 2, 255, 0.7);
         color: white;
         font-size: 12px;
         font-weight: bold;
@@ -112,28 +125,47 @@ for ($i = 1; $i <= 5; $i++) {
         .main-content{
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            gap: 20px;
         }
 
         .matrix-container{
-            padding: 80px;
+            padding: 40px;
             margin: 20px;
-            height: 80%;
-            width: 80%;
+            height: 50%;
+            width: 50%;
             max-width: 700px;
             max-height: 700px;
+            background-color: white;
+            border-radius:30px;
         }
 
         .matrix1{
-            width: 100%; /* Pastikan lebar 100% dari kontainer */
-            height: 100%;
-        table-layout: fixed; /* Membagi kolom secara merata */
-        border-collapse: collapse; /* Menghilangkan jarak antar sel */
+            padding: 12px;
+            max-width: auto;
+            max-width: auto; /* Membagi kolom secara merata */
+            border-collapse: collapse; /* Menghilangkan jarak antar sel */
         }
         
-        /* .chart{
-            max-width: 60%;
-            max-height: 60%;
-        } */
+        .matrixDown-container{
+            flex: 1;
+            padding: 20px;
+            margin: 10;
+            min-width: 300px;
+            min-height: 300px;
+            max-width: 35%;
+            max-height: 35%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius:30px;
+        }
+        .chart{
+            max-width: 100%;
+            max-height: 100%;
+        }
 
     </style>
 </head>
@@ -160,10 +192,14 @@ for ($i = 1; $i <= 5; $i++) {
 
         <!-- Main Content -->
         <div class="main-content">
+            <div class="deskripsi-matrix">
             <h1>Risk Matrix Dashboard</h1>
+            <p style="text-indent:25px; font-family:IM FELL Double Pica;"> Di Halaman ini User bisa melihat 3 Matrix yang dapat digunakan sesuai kebutuhan, user dapat melihat level likelihood dan impact dengan melihat kode resiko yang terdaftar di riskList, user juga dapat melihat jumlah risiko yang dibuat oleh fakultas lain,  user juga dapat melihat kategori resiko yang sudah terdaftar
+            </p>
+            </div>
             <!-- Matrix Likelihood dan Consequence -->
             <div class="matrix-container"><h1>Likelihood vs Impact</h1>
-    <table class="matrix-container" >
+    <table class="matrix1" >
         <tr>
         <tr>
             <th colspan="7" class="axis-label">Impact</th>
@@ -252,23 +288,13 @@ for ($i = 5; $i >= 1; $i--) {
         ?>
         
     </table>
-            </div>
+        </div>
 
             <!-- Matrix Jumlah Risiko Per Fakultas -->
-            <div class="matrix-container">
+            <div class="matrixDown-container">
                 <h3>Matrix Jumlah Risiko Per Fakultas</h3>
                 <canvas id="facultyRiskMatrix" class="chart"></canvas>
-            </div>
-
-            <!-- Matrix Risk Category -->
-            <div class="matrix-container">
-                <h3>Matrix Risk Category</h3>
-                <canvas id="categoryRiskMatrix" class="chart"></canvas>
-            </div>
-        </div>
-    </div>
-
-    <script>
+                <script>
         
 
         // Data untuk Matrix Jumlah Risiko Per Fakultas
@@ -285,7 +311,16 @@ for ($i = 5; $i >= 1; $i--) {
             }
         });
 
-        // Data untuk Matrix Risk Category
+        
+    </script>
+            </div>
+
+            <!-- Matrix Risk Category -->
+            <div class="matrixDown-container">
+                <h3>Matrix Risk Category</h3>
+                <canvas id="categoryRiskMatrix" class="chart"></canvas>
+                <script>
+                    // Data untuk Matrix Risk Category
         var ctxCategory = document.getElementById("categoryRiskMatrix").getContext("2d");
         var categoryChart = new Chart(ctxCategory, {
             type: "pie",
@@ -297,6 +332,10 @@ for ($i = 5; $i >= 1; $i--) {
                 }]
             }
         });
-    </script>
+                </script>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
