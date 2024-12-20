@@ -32,7 +32,7 @@ public function login($username, $password){
 
         header("location:menu_halaman/about.php");
         exit();
-    }else if($data['status']=="rektor"){
+    }else if($data['status']=="rektor" || $data['status']=="Rektor"){
         // $_SESSION['username'] = $username;
 		// $_SESSION['status'] = "dekan";
 
