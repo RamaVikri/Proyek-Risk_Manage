@@ -10,7 +10,6 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
     $password = $_POST['password'];
     
     if($user -> login($username, $password)){
-     
         
     }else {
         echo "password atau Username salah";
