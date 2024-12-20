@@ -1,12 +1,14 @@
 <?php
 
 class VerifLogin{
+    //encapsulation
     private $conn;
     public function __construct($conn)
     {
         $this-> conn = $conn;
     }   
-public function login($username, $password){
+    
+    public function login($username, $password){
     $login = "SELECT * FROM user WHERE username = '$username' AND password = '$password' ";
     $result = mysqli_query($this-> conn, $login);
 

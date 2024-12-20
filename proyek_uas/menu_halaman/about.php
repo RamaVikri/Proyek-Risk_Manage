@@ -15,7 +15,7 @@ if ($_SESSION['status'] == "") {
     <title>Halaman Menu</title>
     <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
+    <!-- <style>
         .fill-content{
             background-color: white;
             border: none;
@@ -24,14 +24,8 @@ if ($_SESSION['status'] == "") {
             margin: 5px;
 
         }
-        .memek{
-            background-color: #f4f4f4f4;
-            border: none;
-            border-radius: 10px;
-            padding: 5px;
-            margin: 5px;
-        }
-    </style>
+        
+    </style> -->
 </head>
 <body>
     <div class="dashboard-container">
@@ -67,7 +61,7 @@ if ($_SESSION['status'] == "") {
             <div class="fill-content">
             <h1>About Page</h1>
             <p>Aplikasi Risk Management ini dirancang untuk membantu organisasi dalam mengidentifikasi, menganalisis, dan mengelola risiko yang mungkin terjadi pada berbagai aspek operasional maupun strategis. Aplikasi ini dibuat dengan tujuan meningkatkan efisiensi proses manajemen risiko, sehingga setiap risiko dapat diantisipasi, dimitigasi, dan dikelola dengan baik.</p>
-            <div class="memek" >
+            <div>
             <h3>Fitur Utama Aplikasi</h3>
                 <h4>Risk Register</br>
                 Modul ini digunakan untuk mencatat seluruh risiko yang diidentifikasi, termasuk detail seperti:<br>

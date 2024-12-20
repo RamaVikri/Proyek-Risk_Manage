@@ -2,7 +2,7 @@
 require '../conn.php';
 
 class User{
-    
+    //encapsulation
     private $conn;
     
     public function __construct($conn)
