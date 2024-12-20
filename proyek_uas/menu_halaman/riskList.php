@@ -17,28 +17,14 @@ $result = $conn->query("SELECT * FROM risk");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk List</title>
     <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        th {
-            background-color: #f4f4f4;
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/riskMatrix.css">
 </head>
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <h2>Aplikasi Risk Management</h2>
-            <h3>Selamat Datang</h3>
-            <p><?php echo $_SESSION['nama']; ?></p>
+            <p><small>Username: <?php echo $_SESSION['nama']; ?></small></p>
             <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>
@@ -48,7 +34,7 @@ $result = $conn->query("SELECT * FROM risk");
                 </li>
                 <li><a href="riskRegister.php">Risk Register</a></li>
                 <li><a href="riskList.php">Risk List</a></li>
-                <li><a href="riskTreatments.php">Risk Treatmens</a></li>
+                <li><a href="riskTreatments.php">Risk Treatments</a></li>
 
                 <!-- fitur khusus admin -->
                 <?php if ($_SESSION['status'] == 'admin'): ?>

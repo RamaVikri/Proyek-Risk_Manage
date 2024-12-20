@@ -63,119 +63,16 @@ for ($i = 1; $i <= 5; $i++) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Matrix</title>
-    <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/riskMatrix.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
-    <style>
-        .deskripsi-matrix{
-            background-color: white;
-            padding: 40px;
-            margin: 20px;
-            height: 50%;
-            width: 34vh;
-            max-width: 700px;
-            max-height: 700px;
-            background-color: white;
-            border-radius:30px;
-        }
-
-        table {
-            border-collapse: collapse;
-            margin: 20px auto;
-            width: 100%;
-            position: relative;
-        }
-        td, th {
-        border: 1px solid black;
-        text-align: center;
-        width: 100px; /* Lebar tetap */
-        height: 80px; /* Tinggi tetap */
-        font-size: 14px;
-        position: relative;
-        word-wrap: break-word; /* Memastikan teks tetap di dalam kotak */
-        overflow: hidden; /* Menghindari overflow konten */
-        }
-
-        /* Pewarnaan Sel */
-        .low { background-color: #00b050; }
-        .low-med { background-color: #92d050; }
-        .medium { background-color: #ffff00; }
-        .med-hi { background-color: #ffc000; }
-        .high { background-color: #c00000; color: white; }
-
-        /* Kode Risiko dalam Lingkaran */
-        .risk-code {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-        margin: 2px; /* Memberi jarak antar risiko */
-        border-radius: 50%;
-        background-color: rgba(2, 2, 255, 0.7);
-        color: white;
-        font-size: 12px;
-        font-weight: bold;
-        }
-
-        .axis-label {
-            font-weight: bold;
-            color: black;
-        }
-
-        .main-content{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-            gap: 20px;
-        }
-
-        .matrix-container{
-            padding: 40px;
-            margin: 20px;
-            height: 50%;
-            width: 50%;
-            max-width: 700px;
-            max-height: 700px;
-            background-color: white;
-            border-radius:30px;
-        }
-
-        .matrix1{
-            padding: 12px;
-            max-width: auto;
-            max-width: auto; /* Membagi kolom secara merata */
-            border-collapse: collapse; /* Menghilangkan jarak antar sel */
-        }
-        
-        .matrixDown-container{
-            flex: 1;
-            padding: 20px;
-            margin: 10;
-            min-width: 300px;
-            min-height: 300px;
-            max-width: 35%;
-            max-height: 35%;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius:30px;
-        }
-        .chart{
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-    </style>
 </head>
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <h2>Aplikasi Risk Management</h2>
-            <h3>Selamat Datang</h3>
-            <p><?php echo $_SESSION['nama']; ?></p>
+            <p><small>Username: <?php echo $_SESSION['nama']; ?></small></p>
             <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>

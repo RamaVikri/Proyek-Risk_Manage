@@ -6,9 +6,6 @@ if ($_SESSION['status'] == "") {
     header("location:index.php?pesan=gagal");
 }
 
-// Database connection
-// $conn = new mysqli("localhost", "root", "", "riskman");
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Generate kode resiko otomatis
     $result = $conn->query("SELECT COUNT(*) AS count FROM risk");
@@ -45,31 +42,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Risk Register</title>
-    <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
-    <style>
-        .month-row {
-            align-items: center;
-            gap: 20px; /* Jarak antar elemen */
-        }
-
-        .month-label {
-            width: 100px; /* Lebar label bulan */
-            font-weight: bold;
-        }
-
-        .options {
-            display: flex;
-            gap: 10px; /* Jarak antara pilihan True/False */
-        }
-    </style>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/riskRegister.css"> <!-- Tambahkan file CSS -->
 </head>
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <h2>Aplikasi Risk Management</h2>
-            <h3>Selamat Datang</h3>
-            <p><?php echo $_SESSION['nama']; ?></p>
+            <p><small>Username: <?php echo $_SESSION['nama']; ?></small></p>
             <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>

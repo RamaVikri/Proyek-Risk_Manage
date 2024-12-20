@@ -42,8 +42,7 @@ if(isset($_POST['submit'])){
         <!-- Sidebar -->
         <div class="sidebar">
             <h2>Aplikasi Risk Management</h2>
-            <h3>Selamat Datang</h3>
-            <p><?php echo $_SESSION['nama']; ?></p>
+            <p><small>Username: <?php echo $_SESSION['nama']; ?></small></p>
             <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
             <ul class="sidebar-menu">
                 <li><a href="../menu_halaman/about.php">About</a></li>

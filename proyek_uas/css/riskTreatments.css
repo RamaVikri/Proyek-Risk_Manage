@@ -1,0 +1,27 @@
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .editable {
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .color-cell {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        /* Style for completed (true/1) cells */
+        .completed {
+            background-color: #4CAF50; /* Green color */
+        }

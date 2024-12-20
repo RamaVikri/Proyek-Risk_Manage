@@ -20,43 +20,15 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Menu</title>
     <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/riskTreatments.css">
     <title>Treatments</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            text-align: center;
-            padding: 8px;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        .editable {
-            background-color: #fff;
-            cursor: pointer;
-        }
-        .color-cell {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-        }
-        /* Style for completed (true/1) cells */
-        .completed {
-            background-color: #4CAF50; /* Green color */
-        }
-    </style>
 </head>
 <body>
     <div class="dashboard-container">
         <!-- Sidebar -->
         <div class="sidebar">
             <h2>Aplikasi Risk Management</h2>
-            <h3>Selamat Datang</h3>
-            <p><?php echo $_SESSION['nama']; ?></p>
+            <p><small>Username: <?php echo $_SESSION['nama']; ?></small></p>
             <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>

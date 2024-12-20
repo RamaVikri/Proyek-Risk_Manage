@@ -20,8 +20,7 @@ if ($_SESSION['status'] == "") {
         <!-- Sidebar -->
         <div class="sidebar">
             <h2>Aplikasi Risk Management</h2>
-            <h3>Selamat Datang</h3>
-            <p><?php echo $_SESSION['nama']; ?></p>
+            <p><small>Username: <?php echo $_SESSION['nama']; ?></small></p>
             <p><small>Status: <?php echo $_SESSION['status']; ?></small></p>
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>
@@ -45,7 +44,34 @@ if ($_SESSION['status'] == "") {
         <!-- Main Content -->
         <div class="main-content">
             <h1>About Page</h1>
-            <p>Selamat datang di halaman "About" aplikasi Risk Management.</p>
+            <p>Aplikasi Risk Management ini dirancang untuk membantu organisasi dalam mengidentifikasi, menganalisis, dan mengelola risiko yang mungkin terjadi pada berbagai aspek operasional maupun strategis. Aplikasi ini dibuat dengan tujuan meningkatkan efisiensi proses manajemen risiko, sehingga setiap risiko dapat diantisipasi, dimitigasi, dan dikelola dengan baik.</p>
+            <h3>Fitur Utama Aplikasi</h3>
+<h4>Risk Register</br>
+Modul ini digunakan untuk mencatat seluruh risiko yang diidentifikasi, termasuk detail seperti:<br>
+Tujuan dan proses bisnis terkait.</br>
+Kategori risiko (strategis, finansial, operasional, dll.).</br>
+Peristiwa risiko, penyebab, dan sumber risiko.</br>
+Potensi kerugian dalam bentuk kualitatif maupun nominal.</br>
+                </br>
+Risk Matrix</br>
+Fitur ini menyediakan matriks risiko yang membantu pengguna dalam menentukan tingkat risiko berdasarkan kemungkinan kejadian (likelihood) dan dampaknya (impact).</br>
+</br>
+
+Risk Treatment</br>
+Modul ini membantu dalam merancang strategi mitigasi untuk setiap risiko yang teridentifikasi, seperti:</br>
+Accept (menerima risiko tanpa tindakan tambahan).</br>
+Reduce (mengurangi risiko melalui tindakan mitigasi tertentu).</br>
+Lengkap dengan deskripsi tindakan mitigasi yang diperlukan.</br>
+Evidence Management</br>
+Pengguna dapat melampirkan bukti (evidence) terkait upaya mitigasi yang dilakukan. Data evidence ini disimpan secara langsung dalam tabel risiko yang relevan.</br>
+</br>
+
+Daftar User</br>
+Fitur ini dikhususkan untuk admin aplikasi untuk mengelola pengguna yang memiliki akses ke aplikasi.</h4>
+            <h3></h3>
+            <h4></h4>
+            <h3></h3>
+            <h4></h4>
         </div>
     </div>
 </body>

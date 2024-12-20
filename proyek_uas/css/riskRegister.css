@@ -1,0 +1,14 @@
+.month-row {
+            align-items: center;
+            gap: 20px; /* Jarak antar elemen */
+        }
+
+        .month-label {
+            width: 100px; /* Lebar label bulan */
+            font-weight: bold;
+        }
+
+        .options {
+            display: flex;
+            gap: 10px; /* Jarak antara pilihan True/False */
+        }
