@@ -26,7 +26,7 @@ public function login($username, $password){
 		header("location:menu_halaman/about.php");
  
         exit();
-    }else if($data['status']=="dekan"){
+    }else if($data['status']=="dekan" || $data['status']=="Dekan"){
         // $_SESSION['username'] = $username;
 		// $_SESSION['status'] = "dekan";
 
