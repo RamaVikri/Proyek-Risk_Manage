@@ -45,7 +45,78 @@ if(isset($_POST['submit'])){
     <title>Update User</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
 
+        .dashboard-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        form ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        form ul li {
+            margin-bottom: 15px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            align-items: center;
+        }
+
+        form ul li label {
+            font-weight: bold;
+        }
+
+        form ul li input,
+        form ul li select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        form ul li button {
+            grid-column: 2 / 3;
+            padding: 10px 15px;
+            background-color: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        form ul li button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
 </head>
 <body>
 <div class="dashboard-container">
@@ -57,15 +128,18 @@ if(isset($_POST['submit'])){
             <ul class="sidebar-menu">
                 <li><a href="../menu_halaman/about.php">About</a></li>
                 
-                <li><a href="../menu_halaman/riskMatrix.php">Risk Matrix</a></li>
+                <li><a href="riskMatrix.php">Risk Matrix</a></li>
                 
                 </li>
+                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'rektor'  || $_SESSION['status'] == 'dekan') : ?>
                 <li><a href="../menu_halaman/riskRegister.php">Risk Register</a></li>
+                <?php endif; ?>
+
                 <li><a href="../menu_halaman/riskList.php">Risk List</a></li>
-                <li><a href="#">Halaman B</a></li>
+                <li><a href="../menu_halaman/riskTreatments.php">Risk Treatments</a></li>
 
                 <!-- fitur khusus admin -->
-                <?php if ($_SESSION['status'] == 'admin'): ?>
+                <?php if ($_SESSION['status'] == 'admin' ||$_SESSION['status'] == 'rektor' ): ?>
                     <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
                 <?php endif; ?>
                 <!-- fitur khusus admin end-->
