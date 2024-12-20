@@ -104,7 +104,7 @@ $data_user = $user-> data();
             <ul class="sidebar-menu">
                 <li><a href="../menu_halaman/about.php">About</a></li>
                 
-                <li><a href="riskMatrix.php">Risk Matrix</a></li>
+                <li><a href="../menu_halaman/riskMatrix.php">Risk Matrix</a></li>
                 
                 </li>
                 <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'rektor'  || $_SESSION['status'] == 'dekan') : ?>
