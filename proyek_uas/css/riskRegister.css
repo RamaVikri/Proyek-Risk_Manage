@@ -1,14 +1,43 @@
-.month-row {
-            align-items: center;
-            gap: 20px; /* Jarak antar elemen */
-        }
+.risk-form {
+    display: grid;
+    gap: 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        .month-label {
-            width: 100px; /* Lebar label bulan */
-            font-weight: bold;
-        }
+.form-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px;
+    align-items: center;
+}
 
-        .options {
-            display: flex;
-            gap: 10px; /* Jarak antara pilihan True/False */
-        }
+.form-row label {
+    font-weight: bold;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

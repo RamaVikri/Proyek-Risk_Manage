@@ -1,148 +1,95 @@
-.desktop-1
-{
-position:absolute;
-background-color:#303030;
-height:1024px;
-width:1440px;
-padding:0px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-.rectangle1
-{
-background-color:rgba(103, 103, 103, 0.699999988079071);
-height:735px;
-width:501px;
-border-radius:30px;
-left:861px;
-top:159px;
-position:absolute;
-}
-.rectangle5
-{
-background-color:#ffd700;
-height:111px;
-width:497px;
-border-radius:30px 30px 0px 0px;
-top:159px;
-left:861px;
-position:absolute;
-}
-.rectangle3
-{
-background-color:#ffffff;
-height:51px;
-width:338px;
-border-radius:28px;
-top:359px;
-left:892px;
-position:absolute;
-}
-.rectangle6
-{
-background-color:#ffffff;
-height:51px;
-width:338px;
-border-radius:28px;
-top:488px;
-left:892px;
-position:absolute;
-}
-.aplikasimanajemenrisiko
-{
-color:#ffffff;
-text-align:left;
-vertical-align:text-top;
-font-size:64px;
-font-family:IM FELL Double Pica;
-left:52px;
-top:428px;
-width:692px;
-height:196px;
-position:absolute;
-line-height:auto;
-border-style:hidden;
-outline:none;
-}
-.logoMerk
-{
-height:255px;
-width:262px;
-left:23px;
-top:173px;
-position:absolute;
-}
-.deskripsi
-{
-color:#ffffff;
-text-align:left;
-vertical-align:text-top;
-font-size:48px;
-font-family:IM FELL Double Pica;
-left:52px;
-top:539px;
-width:723px;
-height:143px;
-position:absolute;
-line-height:auto;
-border-style:hidden;
-outline:none;
-}
-.rectangle2
-{
 
-    font-family:IM FELL Double Pica;
-font-size:28px;
-background-color:#ffd700;
-height:92px;
-width:345px;
-border-radius:44px;
-top:724px;
-left:936px;
-position:absolute;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
 }
-.silahkanlogin
-{
-color:#000000;
-text-align:left;
-vertical-align:text-top;
-font-size:48px;
-font-family:Playfair Display;
-left:937px;
-top:188px;
-width:349px;
-height:52px;
-position:absolute;
-line-height:auto;
-border-style:hidden;
-outline:none;
+
+.left-section {
+    color: #fff;
+    max-width: 50%;
 }
-.username
-{
-color:#ffffff;
-filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
-text-align:left;
-vertical-align:text-top;
-font-size:32px;
-font-family:IM FELL Double Pica;
-left:911px;
-top:300px;
-width:299px;
-height:52px;
-position:absolute;
-line-height:auto;
+
+.logoMerk {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
 }
-.password
-{
-color:#ffffff;
-text-align:left;
-vertical-align:text-top;
-font-size:32px;
-font-family:IM FELL Double Pica;
-left:911px;
-top:436px;
-width:299px;
-height:52px;
-position:absolute;
-line-height:auto;
-border-style:hidden;
-outline:none;
+
+.aplikasimanajemenrisiko {
+    font-size: px;
+    margin: 10px 0;
+}
+
+.deskripsi {
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.login-section {
+    background-color: rgba(103, 103, 103, 0.7);
+    border-radius: 20px;
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.rectangle5 {
+    background-color: #ddd;
+    border-radius: 20px 20px 20px 20px;
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.silahkanlogin {
+    margin: 0;
+    color: #000;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.username, .password {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.rectangle3, .rectangle6 {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+}
+
+.rectangle2 {
+    background-color: #ddd;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rectangle2:hover {
+    background-color: #ddd;
 }

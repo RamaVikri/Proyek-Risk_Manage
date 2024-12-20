@@ -14,6 +14,24 @@ if ($_SESSION['status'] == "") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Menu</title>
     <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .fill-content{
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+
+        }
+        .memek{
+            background-color: #f4f4f4f4;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="dashboard-container">
@@ -46,16 +64,20 @@ if ($_SESSION['status'] == "") {
 
         <!-- Main Content -->
         <div class="main-content">
+            <div class="fill-content">
             <h1>About Page</h1>
             <p>Aplikasi Risk Management ini dirancang untuk membantu organisasi dalam mengidentifikasi, menganalisis, dan mengelola risiko yang mungkin terjadi pada berbagai aspek operasional maupun strategis. Aplikasi ini dibuat dengan tujuan meningkatkan efisiensi proses manajemen risiko, sehingga setiap risiko dapat diantisipasi, dimitigasi, dan dikelola dengan baik.</p>
+            <div class="memek" >
             <h3>Fitur Utama Aplikasi</h3>
-<h4>Risk Register</br>
-Modul ini digunakan untuk mencatat seluruh risiko yang diidentifikasi, termasuk detail seperti:<br>
-Tujuan dan proses bisnis terkait.</br>
-Kategori risiko (strategis, finansial, operasional, dll.).</br>
-Peristiwa risiko, penyebab, dan sumber risiko.</br>
-Potensi kerugian dalam bentuk kualitatif maupun nominal.</br>
-                </br>
+                <h4>Risk Register</br>
+                Modul ini digunakan untuk mencatat seluruh risiko yang diidentifikasi, termasuk detail seperti:<br>
+                Tujuan dan proses bisnis terkait.</br>
+                Kategori risiko (strategis, finansial, operasional, dll.).</br>
+                Peristiwa risiko, penyebab, dan sumber risiko.</br>
+                Potensi kerugian dalam bentuk kualitatif maupun nominal.</br>
+                                </br>
+
+            </div>
 Risk Matrix</br>
 Fitur ini menyediakan matriks risiko yang membantu pengguna dalam menentukan tingkat risiko berdasarkan kemungkinan kejadian (likelihood) dan dampaknya (impact).</br>
 </br>
@@ -71,6 +93,7 @@ Pengguna dapat melampirkan bukti (evidence) terkait upaya mitigasi yang dilakuka
 
 Daftar User</br>
 Fitur ini dikhususkan untuk admin aplikasi untuk mengelola pengguna yang memiliki akses ke aplikasi.</h4>
+</div>
             <h3></h3>
             <h4></h4>
             <h3></h3>

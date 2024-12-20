@@ -19,6 +19,79 @@ $data_user = $user-> data();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css"> <!-- Tambahkan file CSS -->
     <title>Daftar Pengguna</title>
+    <style>
+        /* CSS Internal */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #2c3e50;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,7 +125,7 @@ $data_user = $user-> data();
             <h2>Menu Daftar User</h2>
             <a href="tambah_user.php">Tambah User</a>
         
-        <table border="4px">
+        <table>
             <tr>
                 <th>No.</th>
                 <th>Nama</th>
@@ -67,7 +140,7 @@ $data_user = $user-> data();
                 <td><?= $row["nama"];?></td>
                 <td><?= $row["status"];?></td>
                 <!-- <td>belum paham</td> -->
-                <td><a href="edit_user.php?id=<?= $row["id"];?>">edit</a>|| <a href="delete_user.php?id=<?= $row["id"];?>">delete</a></td>
+                <td><a href="edit_user.php?id=<?= $row["id"];?>">edit</a> || <a href="delete_user.php?id=<?= $row["id"];?>">delete</a></td>
             </tr>
             <?php $i++?>
             <?php endforeach; ?>
