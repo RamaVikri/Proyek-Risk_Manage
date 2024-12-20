@@ -77,12 +77,19 @@ for ($i = 1; $i <= 5; $i++) {
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>
                 <li><a href="riskMatrix.php">Risk Matrix</a></li>
+                </li>
+                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'rektor'  || $_SESSION['status'] == 'dekan') : ?>
                 <li><a href="riskRegister.php">Risk Register</a></li>
+                <?php endif; ?>
+
                 <li><a href="riskList.php">Risk List</a></li>
                 <li><a href="riskTreatments.php">Risk Treatments</a></li>
-                <?php if ($_SESSION['status'] == 'admin'): ?>
+
+                <!-- fitur khusus admin -->
+                <?php if ($_SESSION['status'] == 'admin' ||$_SESSION['status'] == 'rektor' ): ?>
                     <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
                 <?php endif; ?>
+                <!-- fitur khusus admin end-->
                 <li><a href="../logout.php">Logout</a></li>
             </ul>
         </div>
