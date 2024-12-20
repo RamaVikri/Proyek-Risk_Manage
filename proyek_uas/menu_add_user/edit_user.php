@@ -1,11 +1,12 @@
 <?php
 require_once '../conn.php';
-require_once '../util/function.php';
+require_once '../util/user.php';
 session_start();
 
 $id = $_GET['id'];
+// membuat objek class
 $user = new User($conn);
-$data_user = data("SELECT * FROM user WHERE id = $id")[0];
+$data_user =  data("SELECT * FROM user WHERE id = $id")[0];
 
 function data($isiData){
     global $conn;
@@ -17,23 +18,9 @@ function data($isiData){
     return $rows;
 }
 
-// function ubah_data($data){
-//     global $conn;
-//     $id = $data["id"];
-//     $username = $data["username"];
-//     $password = $data["password"];
-//     $nama = $data["nama"];
-//     $status = $data["status"];
-
-//     $input_data = "UPDATE user SET username = '$username', password = '$password', nama ='$nama', status = '$status' WHERE id = $id";
-
-//     mysqli_query($conn, $input_data);
-
-//     return mysqli_affected_rows($conn);
-// }
 if(isset($_POST['submit'])){
    
-
+    //menggunakan method
     if($user-> ubah_data($_POST)> 0){
         echo"<script>
         alert('data berhasil diupdate!');

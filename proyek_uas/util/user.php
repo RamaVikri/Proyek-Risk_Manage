@@ -9,7 +9,7 @@ class User{
     {
         $this->conn = $conn;
     }
-    // methoduntuk menampilkan data pengguna menggunakan foreach
+    // method untuk menampilkan data pengguna menggunakan foreach
     public function data(){
         $query = "SELECT * FROM user ";
         $result = mysqli_query($this->conn, $query);
@@ -20,7 +20,7 @@ class User{
         return $rows;
     }
     
-    // function untuk menambahkan data pengguna baru
+    // method untuk menambahkan data pengguna baru
     public function tambah_data($data){
         $username = $data["username"];
         $password = $data["password"];
@@ -33,7 +33,7 @@ class User{
         return mysqli_affected_rows($this-> conn);
     }
     
-    // function untuk menghapus pengguna
+    // method untuk menghapus pengguna
     public function delete($id){
        
     
@@ -42,7 +42,7 @@ class User{
         return mysqli_affected_rows($this->conn);
     }
     
-    // fucntion untuk update/ atau memperbarui data pengguna
+    // method untuk update/ atau memperbarui data pengguna
    public function ubah_data($data){
         $id = $data["id"];
         $username = $data["username"];

@@ -1,8 +1,9 @@
 <?php
 require_once '../conn.php';
-require_once '../util/function.php';
+require_once '../util/user.php';
 session_start();
 
+// membuat objek class
 $user = new User($conn);
 
 if(isset($_POST['submit'])){
@@ -13,6 +14,7 @@ if(isset($_POST['submit'])){
         "status" => $_POST['status']
    ];
 
+// menggunakan method
     if($user -> tambah_data($data)> 0 ){
         echo"<script>
         alert('data berhasil ditambah!');

@@ -1,11 +1,12 @@
 <?php
 require_once '../conn.php';
-require_once '../util/function.php';
+require_once '../util/user.php';
 session_start();
 
 
-
+// membuat objek class
 $user = new User($conn);
+// menggunakan method
 $data_user = $user-> data();
 
 
