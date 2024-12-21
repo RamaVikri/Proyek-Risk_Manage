@@ -36,78 +36,8 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah User</title>
     <link rel="stylesheet" href="../css/dashboard.css"> 
-    <!-- Tambahkan file CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
+    <link rel="stylesheet" href="../css/tambah_user.css"> 
 
-        .dashboard-container {
-            display: flex;
-            height: 100vh;
-        }
-
-        .main-content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        form {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-        }
-
-        form ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        form ul li {
-            margin-bottom: 15px;
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            align-items: center;
-        }
-
-        form ul li label {
-            font-weight: bold;
-        }
-
-        form ul li input,
-        form ul li select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        form ul li button {
-            grid-column: 2 / 3;
-            padding: 10px 15px;
-            background-color: #2c3e50;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        form ul li button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
 <div class="dashboard-container">
@@ -121,19 +51,20 @@ if(isset($_POST['submit'])){
                 
                 <li><a href="../menu_halaman/riskMatrix.php">Risk Matrix</a></li>
                 
+                <!-- fitur khusus admin & rektor  & dekan yaitu risk register-->
                 </li>
-                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'rektor'  || $_SESSION['status'] == 'dekan') : ?>
+                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'Rektor'  || $_SESSION['status'] == 'Rekan') : ?>
                 <li><a href="../menu_halaman/riskRegister.php">Risk Register</a></li>
                 <?php endif; ?>
-
+                
                 <li><a href="../menu_halaman/riskList.php">Risk List</a></li>
                 <li><a href="../menu_halaman/riskTreatments.php">Risk Treatments</a></li>
 
-                <!-- fitur khusus admin -->
-                <?php if ($_SESSION['status'] == 'admin' ||$_SESSION['status'] == 'rektor' ): ?>
+                <!-- fitur khusus admin & rektor -->
+                <?php if ($_SESSION['status'] == 'admin'  || $_SESSION['status'] == 'Rektor' ): ?>
                     <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
                 <?php endif; ?>
-                <!-- fitur khusus admin end-->
+                
                 <li><a href="../logout.php">Logout</a></li>
             </ul>
         </div>

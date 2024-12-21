@@ -122,12 +122,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul class="sidebar-menu">
                 <li><a href="about.php">About</a></li>
                 <li><a href="riskMatrix.php">Risk Matrix</a></li>
-                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'rektor' || $_SESSION['status'] == 'dekan') : ?>
+                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'Rektor' || $_SESSION['status'] == 'Dekan') : ?>
                 <li><a href="riskRegister.php">Risk Register</a></li>
                 <?php endif; ?>
                 <li><a href="riskList.php">Risk List</a></li>
                 <li><a href="riskTreatments.php">Risk Treatments</a></li>
-                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'rektor') : ?>
+                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'Rektor') : ?>
                     <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
                 <?php endif; ?>
                 <li><a href="../logout.php">Logout</a></li>

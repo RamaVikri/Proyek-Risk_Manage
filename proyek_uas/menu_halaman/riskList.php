@@ -32,7 +32,7 @@ $result = $conn->query("SELECT * FROM risk");
                 <li><a href="riskMatrix.php">Risk Matrix</a></li>
                 
                 </li>
-                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'rektor'  || $_SESSION['status'] == 'dekan') : ?>
+                <?php if ($_SESSION['status'] == 'admin' || $_SESSION['status'] == 'Rektor'  || $_SESSION['status'] == 'Dekan') : ?>
                 <li><a href="riskRegister.php">Risk Register</a></li>
                 <?php endif; ?>
 
@@ -40,7 +40,7 @@ $result = $conn->query("SELECT * FROM risk");
                 <li><a href="riskTreatments.php">Risk Treatments</a></li>
 
                 <!-- fitur khusus admin -->
-                <?php if ($_SESSION['status'] == 'admin' ||$_SESSION['status'] == 'rektor' ): ?>
+                <?php if ($_SESSION['status'] == 'admin' ||$_SESSION['status'] == 'Rektor' ): ?>
                     <li><a href="../menu_add_user/daftar_user.php">Daftar User</a></li>
                 <?php endif; ?>
                 <!-- fitur khusus admin end-->
