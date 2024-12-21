@@ -1,1 +1,0 @@
-# Proyek-Risk_Manage
